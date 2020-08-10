@@ -1,0 +1,11 @@
+<h1><%= @blogger.name %></h1>
+
+<%= @blogger.bio %><br>
+<%= @blogger.age %><br><br>
+<p>Total Number Of Likes</p>
+<%= @blogger.get_like_total %><br>
+
+<% if @blogger.posts.any?%>
+<h5>Featured Post</h5>
+<%= link_to @blogger.featured_post.title, post_path(@blogger.featured_post)%>
+<%end%>

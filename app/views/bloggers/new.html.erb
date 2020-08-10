@@ -1,0 +1,22 @@
+<h1>New Blogger</h1>
+
+<% if flash[:my_errors]%>
+  <% flash[:my_errors].each do |error|%>
+  <%= error %><br>
+  <%end%>
+<%end%>
+
+<%= form_for @blogger do |f|%>
+
+<%= f.label :name%>
+<%= f.text_field :name%><br>
+
+<%= f.label :bio%>
+<%= f.text_area :bio%><br>
+
+<%= f.label :age%>
+<%= f.number_field :age%><br>
+
+<%= f.submit %>
+
+<%end%>
